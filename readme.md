@@ -7,7 +7,7 @@ This template files comes from Freie University's template.
 I'd appreciate their greate efforts. 
 
 
-@author: ugeun.jang@uwa.edu.au
+@author: orange224@gmail.com
 @date: 2013-06-01
 @see: http://www.mi.fu-berlin.de/w/Mi/BeamerTemplateCorporateDesign
 @purpose: This template is for CPGCO2 members and it is based on the BeamerTemplate of Freie Universit\"{a}t Berlin
