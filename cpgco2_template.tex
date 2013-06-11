@@ -1,0 +1,316 @@
+% Template for talks using the Corporate Design of the Freie Universitaet
+%   Berlin, created following the guidelines on www.fu-berlin.de/cd by
+%   Tobias G. Pfeiffer, <tobias.pfeiffer@math.fu-berlin.de>
+% This file can be redistributed and/or modified in any way you like.
+%   If you feel you have done significant improvements to this template,
+%   please consider providing your modified version to
+%   https://www.mi.fu-berlin.de/w/Mi/BeamerTemplateCorporateDesign
+
+
+
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+% @see: http://www.mi.fu-berlin.de/w/Mi/BeamerTemplateCorporateDesign
+% @purpose: This template is for CPGCO2 members and it is based on the BeamerTemplate of Freie Universit\"{a}t Berlin
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------ useful packages
+\usepackage{amsthm, amsmath, amsfonts, amssymb, dsfont, calrsfs, cancel, pifont}
+
+\usepackage{pdfpages}
+
+\usepackage[utf8x]{inputenc}    % to make utf-8 input possible
+\usepackage[english]{babel}     % hyphenation etc., alternatively use 'german' as 
+
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{animate}
+%\usepackage{array}
+%\usepackage{multirow}
+%\usepackage{etoolbox}
+%\usepackage{ragged2e}         % @see: http://www.ctan.org/pkg/ragged2e
+% ------------------------------------------------------------------------------------------------------ useful packages
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------- beamer size
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+% @note: 1 cm = 0.393 
+%        1 in = 28.346 pt
+%        1 pt = 1/72 in = 0.0352 cm
+
+\setbeamersize{text margin left=10pt, text margin right=21pt}
+\setbeamersize{sidebar width left=0pt, sidebar width right=0pt}
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{sidebar left}{}
+% ---------------------------------------------------------------------------------------------------------- beamer size
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------------- fonts
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+
+% sans serif font
+% @see: http://www.tug.dk/FontCatalogue/cabin
+%\usepackage[sfdefault]{cabin}
+%\usepackage[T1]{fontenc}
+
+% @see: http://www.tug.dk/FontCatalogue/sourcesanspro
+%\usepackage[default]{sourcesanspro}
+%\usepackage[T1]{fontenc}
+
+% @see: http://www.tug.dk/FontCatalogue/arial
+% @see: http://www.tug.org/fonts/getnonfreefonts
+% @see: http://www.ctan.org/tex-archive/fonts/urw
+%\usepackage[scaled]{uarial}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+
+% @see: http://www.tug.dk/FontCatalogue/berasans
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+% fonts with math support
+% @see: http://www.tug.dk/FontCatalogue/utopia
+\usepackage{fourier}
+\usepackage[T1]{fontenc}
+
+
+% mono space font
+% @see: http://www.tug.dk/FontCatalogue/inconsolata
+\usepackage{inconsolata}
+\usepackage[T1]{fontenc}
+
+
+% reset font size
+% @see: http://en.wikibooks.org/wiki/LaTeX/Fonts#Sizing_text
+% @see: http://www.ctan.org/pkg/anyfontsize
+\usepackage{anyfontsize}
+\renewcommand{\Large}{\fontsize{13}{1em}\selectfont}
+\renewcommand{\large}{\fontsize{11}{1em}\selectfont}
+\renewcommand{\normalsize}{\fontsize{10}{1em}\selectfont}
+\renewcommand{\small}{\fontsize{9}{1em}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{8}{1em}\selectfont}
+\renewcommand{\scriptsize}{\fontsize{7}{1em}\selectfont}
+\renewcommand{\tiny}{\fontsize{6}{1em}\selectfont}
+% ---------------------------------------------------------------------------------------------------------------- fonts
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------------- list 
+% @see: http://tex.stackexchange.com/questions/78167/indentation-within-an-itemized-list
+% @see: http://ctan.unsw.edu.au/macros/latex/contrib/enumitem/enumitem.pdf
+\usepackage{enumitem}
+
+\setitemize{itemsep=4pt,%
+  label=\usebeamerfont*{itemize item}%
+		\usebeamercolor[fg]{itemize item}%
+		\usebeamertemplate{itemize item}%
+}
+
+
+\setenumerate[1]{%
+	label=\protect\usebeamerfont{enumerate item}%
+	\protect\usebeamercolor[fg]{enumerate item}%
+	\insertenumlabel.}
+% ---------------------------------------------------------------------------------------------------------------- list 
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------ figure captions
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+% @see: http://www.ctex.org/documents/packages/float/caption.pdf
+
+\usepackage[hang]{subfigure}
+\usepackage[font=sf,hang]{caption}
+\setbeamertemplate{caption}[numbered]
+\renewcommand{\captionlabelfont}{\bf \tiny}
+\renewcommand{\captionfont}{\tiny}
+\captionsetup{skip=3pt}
+% ------------------------------------------------------------------------------------------------------ figure captions
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------------------------------------------- color
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+
+\definecolor{uwa_blue}{RGB}{0, 51, 102} % blue text
+\definecolor{uwa_green}{RGB}{153, 204, 0} % green text
+\definecolor{uwa_red}{RGB}{204, 0, 0} % red text (used by \alert)
+
+\definecolor{uwa_spanishgray}{RGB}{152, 152, 152} % grey text on white background
+\definecolor{uwa_battlegray}{RGB}{132, 132, 130} % grey text on white background
+\definecolor{uwa_gray}{RGB}{128, 128, 128} % grey text on white background
+\definecolor{uwa_dimgray}{RGB}{105, 105, 105} % grey text on white background
+\definecolor{uwa_darkgray}{RGB}{85, 85, 85} % grey text on white background
+
+% fu-beamer
+\definecolor{text-grey}{rgb}{0.45, 0.45, 0.45} % grey text on white background
+\definecolor{bg-grey}{rgb}{0.66, 0.65, 0.60} % grey background (for white text)
+\definecolor{fu-blue}{RGB}{0, 51, 102} % blue text
+\definecolor{fu-green}{RGB}{153, 204, 0} % green text
+\definecolor{fu-red}{RGB}{204, 0, 0} % red text (used by \alert)
+
+\usecolortheme{lily}
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=fu-red}
+\setbeamercolor*{example text}{fg=fu-green}
+\setbeamercolor*{structure}{fg=fu-blue}
+
+\setbeamercolor*{block title}{fg=white,bg=black!50}
+\setbeamercolor*{block title alerted}{fg=white,bg=black!50}
+\setbeamercolor*{block title example}{fg=white,bg=black!50}
+
+\setbeamercolor*{block body}{bg=black!10}
+\setbeamercolor*{block body alerted}{bg=black!10}
+\setbeamercolor*{block body example}{bg=black!10}
+
+\setbeamercolor{bibliography entry author}{fg=fu-blue}
+\setbeamercolor{bibliography entry journal}{fg=text-grey}
+
+\setbeamercolor{item}{fg=fu-blue}
+\setbeamercolor{navigation symbols}{fg=uwa_darkgray,bg=uwa_gray}
+% ---------------------------------------------------------------------------------------------------------------- color
+
+
+
+
+
+
+
+
+
+
+% ----------------------------------------------------------------------------------------------------------- title page
+\setbeamertemplate{title page}{%
+	\vskip64pt%
+	\parbox[top][1.5cm][c]{0.9\paperwidth}{
+		\centering%
+		\Large \bfseries \color{uwa_darkgray} \inserttitle        \\[2pt]%
+		\large \bfseries \color{uwa_gray}     \insertsubtitle
+	} 
+	\vskip24pt%
+	\parbox[top][1.35cm][c]{11cm}{%
+		\centering%
+		\normalsize   \color{black}           \insertauthor       \\[4pt]%
+		\footnotesize \color{uwa_darkgray} 
+			Centre for Petroleum Geoscience and CO2 Sequestration \\[1pt]
+			School of Earth and Environment                       \\[1pt]
+			The University of Western Australia                   \\[4pt]
+		\footnotesize \color{black}           \insertdate
+	}
+}
+% ----------------------------------------------------------------------------------------------------------- title page
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------- headline
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+% @note: 1 cm = 0.393 
+%        1 in = 28.346 pt
+%        1 pt = 1/72 in = 0.0352 cm
+
+\setbeamertemplate{headline}{
+	\vskip12pt
+}
+
+\setbeamertemplate{frametitle}
+{
+	\nointerlineskip
+	\begin{beamercolorbox}[left,ht=1em,wd=\paperwidth,sep=2.6mm]{frametitle}
+		\vbox{} \vskip-4pt%
+		\strut
+			\bfseries \footnotesize
+			\color{uwa_darkgray} \insertframetitle \,
+			\color{uwa_gray}     \insertframesubtitle
+		\strut
+		\vskip-17pt
+	\end{beamercolorbox}
+}
+% ------------------------------------------------------------------------------------------------------------- headline
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------- footline
+% @author: ugeun.jang@uwa.edu.au
+% @date: 2013-06-01
+
+\def\myemail#1{\def\myemail{#1}}
+
+\newcommand{\footlinetext}{\insertshortauthor, \insertshortdate}
+\setbeamertemplate{footline}{
+	\vskip2pt
+	\makebox[\paperwidth]{
+		\centering
+		\hspace{2mm}
+		\color{uwa_darkgray} {\fontsize{5}{1em}\selectfont \footlinetext}                 \hfill 
+		\raisebox{-2pt}{\usebeamertemplate***{navigation symbols}} \hspace{3pt}            %\hfill
+		\color{uwa_darkgray} {\fontsize{5}{1em}\selectfont \insertframenumber}            \hfill
+		\color{uwa_darkgray} {\fontsize{5}{1em}\selectfont \myemail}
+		\hspace{5mm}
+	}
+	\vskip2pt
+}
+% ------------------------------------------------------------------------------------------------------------- footline
